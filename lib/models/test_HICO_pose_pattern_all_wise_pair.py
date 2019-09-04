@@ -19,7 +19,6 @@ import sys
 import glob
 import time
 import ipdb
-
 import tensorflow as tf
 from tensorflow.python import pywrap_tensorflow
 
@@ -219,6 +218,11 @@ def test_net(sess, net, Test_RCNN, output_dir, object_thres, human_thres):
         _t['im_detect'].toc()
         print('im_detect: {:d}/{:d} {:.3f}s'.format(count + 1, 9658, _t['im_detect'].average_time))
         count += 1
+
+        # Showing the image
+        print("Detection performed")
+        ipdb.set_trace()
+        #
         
         # BREAK -  for testing
         break
