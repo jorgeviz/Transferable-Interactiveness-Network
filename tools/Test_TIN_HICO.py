@@ -69,7 +69,8 @@ if __name__ == '__main__':
     
     test_net(sess, net, Test_RCNN, output_file, args.object_thres, args.human_thres)
     sess.close()
-
+    # BK
+    ipdb.set_trace()
   
     # thres_X and thres_Y indicate the NIS threshold to suppress the pair which might be no-interaction
     thres_x = 0.1

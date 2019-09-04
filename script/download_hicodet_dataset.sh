@@ -8,9 +8,7 @@
 # ---------------HICO-DET Dataset------------------
 echo "Downloading HICO-DET Dataset"
 
-URL_HICO_DET=http://napoli18.eecs.umich.edu/public_html/data/hico_20160224_det.tar.gz
-
-wget -N $URL_HICO_DET -P Data/
+python scriptDownload_data.py 1QZcJmGVlF9f4h-XLWe9Gkmnmj2z1gSnk Data/hico_20160224_det.tar.gz
 tar -xvzf Data/hico_20160224_det.tar.gz -C Data/
 rm Data/hico_20160224_det.tar.gz
 
@@ -23,8 +21,8 @@ cp script/save_mat.m Data/ho-rcnn/
 cp script/load_mat.m Data/ho-rcnn/
 
 mkdir Data/ho-rcnn/data/hico_20160224_det/
-cp HICO-DET_Benchmark/data/hico_20160224_det/anno_bbox.mat Data/ho-rcnn/data/hico_20160224_det/
-cp HICO-DET_Benchmark/data/hico_20160224_det/anno.mat Data/ho-rcnn/data/hico_20160224_det/
+cp Data/hico_20160224_det/anno_bbox.mat Data/ho-rcnn/data/hico_20160224_det/
+cp Data/hico_20160224_det/anno.mat Data/ho-rcnn/data/hico_20160224_det/
 
 mkdir -Results/
 
