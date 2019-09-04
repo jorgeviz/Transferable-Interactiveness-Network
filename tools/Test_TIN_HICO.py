@@ -73,12 +73,11 @@ if __name__ == '__main__':
     saver.restore(sess, weight)
     print("Model Restored")
     ipdb.set_trace()
-
-    print('Pre-trained weights loaded.')
     
     test_net(sess, net, Test_RCNN, output_file, args.object_thres, args.human_thres)
     sess.close()
     # BK
+    print('Test image computed')
     ipdb.set_trace()
   
     # thres_X and thres_Y indicate the NIS threshold to suppress the pair which might be no-interaction
