@@ -253,7 +253,7 @@ def deal_with_det_del_pair(det_file,binary_rank_rank):
     b_pair = np.zeros(num_pairs, dtype = 'float32')
     c_pair = np.zeros(num_pairs, dtype = 'float32')
 
-    for image_id, value in det_file.iteritems(): # traverse all items in pkl file
+    for image_id, value in  det_file.items(): #det_file.iteritems(): # traverse all items in pkl file
 
         image_index = test_image_all.index(image_id) # image_id is not image index in gt
         info = data['bbox_test'][0, image_index]['hoi']
