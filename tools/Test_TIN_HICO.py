@@ -45,7 +45,10 @@ if __name__ == '__main__':
     args = parse_args()
 
     # test detections result
-    Test_RCNN      = pickle.load( open( cfg.DATA_DIR + '/' + 'Test_Faster_RCNN_R-50-PFN_2x_HICO_DET_with_pose.pkl', "rb" ) ) 
+    Test_RCNN      = pickle.load( 
+        open( cfg.DATA_DIR + '/' + 'Test_Faster_RCNN_R-50-PFN_2x_HICO_DET_with_pose.pkl', "rb" ),
+        encoding="latin1" 
+        ) 
 
     # pretrain model
     weight = cfg.ROOT_DIR + '/Weights/' + args.model + '/HOI_iter_' + str(args.iteration) + '.ckpt'
