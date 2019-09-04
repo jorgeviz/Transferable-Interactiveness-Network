@@ -54,9 +54,10 @@ if __name__ == '__main__':
     weight = cfg.ROOT_DIR + '/Weights/' + args.model + '/HOI_iter_' + str(args.iteration) + '.ckpt'
     print ('Human thres = ' + str(args.human_thres) + ', Object thres = ' + str(args.object_thres) + ', iter = ' + str(args.iteration) + ', path = ' + weight ) 
     output_file = cfg.ROOT_DIR + '/-Results/' + str(args.iteration) + '_' + args.model + '_' + str(args.human_thres) + '_' + str(args.object_thres) +  'new_pair_selection_H2O2.pkl'
-
+    
+    print("Loaded Model")
+    ipdb.set_trace()
     # init session
-
     tfconfig = tf.ConfigProto(allow_soft_placement=True)
     tfconfig.gpu_options.allow_growth=True
     sess = tf.Session(config=tfconfig)
