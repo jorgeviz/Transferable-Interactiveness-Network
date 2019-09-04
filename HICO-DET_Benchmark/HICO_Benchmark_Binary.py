@@ -153,7 +153,7 @@ def deal_with_det(det_file):
                         break
 
             if flag == 1:
-            	inter_label[pair_id] = 1 # give inter labels
+                inter_label[pair_id] = 1 # give inter labels
                 if flag_wrong_object == 1:
                     c_pair[pair_id] = 1
                     c_pair_num += 1
@@ -179,7 +179,7 @@ def deal_with_det(det_file):
                     a_520_score.append(d_score_inter[pair_id])
 
             else:
-            	no_inter_label[pair_id] = 1 # give no_inter labels
+                no_inter_label[pair_id] = 1 # give no_inter labels
                 c_pair[pair_id] = 1
                 c_pair_num += 1
                 c_binary_score += d_score_inter[pair_id]
@@ -315,7 +315,7 @@ def deal_with_det_del_pair(det_file,binary_rank_rank):
                         break
 
             if flag == 1:
-            	inter_label[pair_id] = 1 # give inter labels
+                inter_label[pair_id] = 1 # give inter labels
                 if flag_wrong_object == 1:
                     c_pair[pair_id] = 1
                 elif flag_no_inter == 1:
@@ -323,7 +323,7 @@ def deal_with_det_del_pair(det_file,binary_rank_rank):
                 else:
                     a_pair[pair_id] = 1
             else:
-            	no_inter_label[pair_id] = 1 # give no_inter labels
+                no_inter_label[pair_id] = 1 # give no_inter labels
                 c_pair[pair_id] = 1
 
             pair_id += 1
