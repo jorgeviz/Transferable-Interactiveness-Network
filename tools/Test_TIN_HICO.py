@@ -61,13 +61,18 @@ if __name__ == '__main__':
     tfconfig = tf.ConfigProto(allow_soft_placement=True)
     tfconfig.gpu_options.allow_growth=True
     sess = tf.Session(config=tfconfig)
+    print("TF Session")
+    ipdb.set_trace()
 
     net = ResNet50()
     net.create_architecture(False)
-    
-    
+    print("Model Init")
+    ipdb.set_trace()
+
     saver = tf.train.Saver()
     saver.restore(sess, weight)
+    print("Model Restored")
+    ipdb.set_trace()
 
     print('Pre-trained weights loaded.')
     
