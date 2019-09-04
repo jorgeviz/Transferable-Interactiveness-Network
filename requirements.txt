@@ -9,5 +9,5 @@ Pillow==6.0.0
 # datasets==0.0.9
 ipdb==0.12
 # model==0.6.0
-pycocotools==2.0.03 
+# pycocotools==2.0.03 
 # utils==0.9.0
