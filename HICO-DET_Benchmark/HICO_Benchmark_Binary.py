@@ -413,7 +413,7 @@ def cal_rank_600():
 
 
     with open(output_file, "rb") as f:
-        det_file = pickle.load(f)
+        det_file = pickle.load(f, encoding="latin1")
 
     prec_inter, recall_inter, prec_no_inter, recall_no_inter, num_inter, num_no_inter, binary_rank ,binary_score_nointer ,binary_score_inter , a_pair, b_pair, c_pair = deal_with_det(det_file)
 
