@@ -73,6 +73,10 @@ def im_detect(sess, net, image_id, Test_RCNN, object_thres, human_thres, detecti
                     # print("the binary score is",prediction_binary[0][0])
                     This_image.append(temp)
 
+    # Prediction show
+    print("Prediction Estimation")
+    ipdb.set_trace()
+
     if len(This_image) == 0:
 
         print('Dealing with zero-sample test Image '+str(image_id))
