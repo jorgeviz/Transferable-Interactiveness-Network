@@ -174,5 +174,7 @@ if __name__ == "__main__":
     )
     # Predict Sentences
     _sents = predict_sent(d_bboxes, args.anno_bbox_mat, args.hico_obj_names)
+    cv2.putText(im_orig, _sents, (20,20) , cv2.FONT_HERSHEY_PLAIN, 
+        1.0, (1.0,1.0,1.0), 1)
     # Display Boxed Image
     display_img(im_orig, _sents)
